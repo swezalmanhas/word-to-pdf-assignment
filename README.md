@@ -1,7 +1,3 @@
-Here’s a **detailed `README.md`** template tailored for your project. You can modify it further based on your preferences:
-
----
-
 # Word to PDF Conversion Backend
 
 This is the backend implementation of a **Word to PDF Conversion Application**. It provides APIs for uploading Word documents and converting them to PDF format.

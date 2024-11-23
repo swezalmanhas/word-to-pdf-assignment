@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://word-to-pdf-assignment.onrender.com",
+  baseURL: "https://react-backend-eh5x.onrender.com",
 });
 
 export default instance;

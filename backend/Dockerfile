@@ -1,23 +1,39 @@
-# Use a Node.js image with Debian base for better package support
-FROM node:20-bullseye AS build-deps
+# Stage 1: Use the LibreOffice alpine image
+FROM libreofficedocker/alpine:3.17 AS libreoffice
 
-# Set the working directory
-WORKDIR /usr/src/app
+FROM node:20-alpine 
+RUN apk update
 
-# Copy package files for dependency installation
-COPY package*.json /usr/src/app/
+# Install necessary dependencies for LibreOffice
+RUN apk add --no-cache \
+    libmount \
+    dbus-libs \
+    gcompat \
+    ttf-droid \
+    ttf-freefont \
+    ttf-liberation \
+    ttf-dejavu  # Optional: for better font rendering
+
+# Set working directory
+WORKDIR /app
+
+# Copy LibreOffice binaries from the first stage
+COPY --from=libreoffice /usr /usr
+
+# Copy package.json and package-lock.json
+COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm install --production
 
-# Install LibreOffice
-RUN apt-get update && apt-get install -y libreoffice
+# Copy the rest of the application code
+COPY . .
 
-# Copy the rest of the application files
-COPY . /usr/src/app/
-
-# Expose the application's port
+# Expose the backend port
 EXPOSE 5000
 
-# Start the application
+# Define environment variables (optional)
+ENV PORT=5000
+
+# Start the server
 CMD ["node", "app.js"]

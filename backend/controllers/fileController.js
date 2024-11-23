@@ -76,7 +76,7 @@ const convertToPDF = asyncHandler(async (req, res) => {
 
     console.log("PDF generated at:", outputPath);
 
-    res.status(200).json({ pdfPath: `http://localhost:5000/uploads/${path.basename(outputPath)}` });
+    res.status(200).json({ pdfPath: `https://react-backend-eh5x.onrender.com/uploads/${path.basename(outputPath)}` });
   } catch (error) {
     console.error("Error converting file to PDF:", error);
     throw new Error("Failed to convert file to PDF. " + error.message);

@@ -8,7 +8,6 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-async-handler": "^1.2.0",
-    "hummus": "^1.0.117",
     "libreoffice-convert": "^1.6.0",
     "mammoth": "^1.8.0",
     "mongoose": "^7.2.0",

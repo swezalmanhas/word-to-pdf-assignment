@@ -98,25 +98,6 @@ backend/
 
 ---
 
-## How to Contribute
-
-1. Fork the repository.
-2. Create a new feature branch:
-   ```bash
-   git checkout -b feature-name
-   ```
-3. Commit your changes:
-   ```bash
-   git commit -m "Add feature-name"
-   ```
-4. Push your branch:
-   ```bash
-   git push origin feature-name
-   ```
-5. Open a pull request.
-
----
-
 ## Acknowledgments
 
 - **Node.js**: Backend runtime environment.
@@ -124,3 +105,78 @@ backend/
 - Contributors and community for their support.
 
 --- 
+
+
+Here's a **short documentation** for the frontend part of your project:  
+
+---
+
+## Frontend Documentation  
+
+The frontend of the **Word to PDF Conversion Application** is designed for user interaction, allowing them to upload Word documents and view their metadata or converted files.  
+
+---
+
+### Features  
+
+- **File Upload Interface**: User-friendly interface for uploading Word files.  
+- **Metadata Display**: Displays file-related metadata.  
+- **API Integration**: Seamless connection to the backend for processing.  
+- **Utility Functions**: Modularized utilities for handling common tasks.  
+
+---
+
+### Project Structure  
+
+```
+frontend/
+├── src/
+│   ├── api/
+│   │   └── axios.js           # Axios instance for API requests
+│   ├── components/
+│   │   └── MetadataDisplay.js # Component for displaying file metadata
+│   ├── utils/
+│   │   └── formatUtils.js     # Utility functions for formatting
+│   └── api.js                 # API calls for the application
+```
+
+---
+
+### Key Modules  
+
+#### 1. `axios.js`  
+- Custom Axios instance for managing HTTP requests.  
+- Includes base URL configuration for backend communication.  
+
+#### 2. `MetadataDisplay.js`  
+- React component for displaying file metadata, such as name, size, and type.  
+- Dynamically updates based on user-uploaded files.  
+
+#### 3. `formatUtils.js`  
+- Utility functions for formatting data (e.g., file size).  
+- Ensures consistent data representation across the application.  
+
+#### 4. `api.js`  
+- Centralized API interaction module.  
+- Abstracts backend endpoints for file upload and metadata retrieval.  
+
+---
+
+### How to Run the Frontend  
+
+1. Navigate to the `frontend` directory:
+   ```bash
+   cd word-to-pdf-assignment/frontend
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+
+4. Access the application at `http://localhost:3000`.  

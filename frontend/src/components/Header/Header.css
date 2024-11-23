@@ -1,0 +1,126 @@
+/* Header Main Styling */
+.header {
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Vibrant gradient background */
+  color: #fff;
+  padding: 20px;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 30px auto; /* Center the header */
+  border-radius: 20px;
+  max-width: 79%; /* Ensures proper responsiveness */
+}
+
+/* Header Content Layout */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between items */
+}
+
+/* Logo Section */
+.header-left {
+  text-align: left;
+}
+
+.header-logo {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.header-subtext {
+  font-size: 16px;
+  color: #e0e0e0;
+  margin-top: 5px;
+  font-style: italic;
+  display: block; /* Ensure it's on its own line */
+}
+
+/* Remove the line below the logo in mobile view */
+@media (max-width: 480px) {
+  .header-logo {
+    font-size: 24px; /* Smaller font size */
+  }
+
+  .header-subtext {
+    font-size: 14px; /* Adjusted smaller font size */
+    margin-top: 0; /* Remove unnecessary margin */
+  }
+
+  /* Hide the line under the logo in mobile view */
+  .header-left .nav-link::after {
+    display: none;
+  }
+}
+
+/* Call-to-Action Button */
+.header-right {
+  text-align: right;
+}
+
+.cta-btn {
+  background: #ff8a00;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn:hover {
+  background: #e57c00;
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    margin: 10px auto;
+    border-radius: 15px;
+    padding: 15px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-left {
+    margin-bottom: 15px;
+  }
+
+  .cta-btn {
+    margin-top: 15px;
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-btn {
+    font-size: 14px;
+    padding: 8px 16px; /* More compact button */
+  }
+
+  .header-logo {
+    font-size: 22px; /* Make the logo smaller on mobile */
+  }
+
+  .header-subtext {
+    font-size: 12px; /* Reduce subtext size */
+  }
+
+  /* Additional padding adjustments for a slimmer header */
+  .header {
+    padding: 15px 20px; /* Slightly reduced padding */
+  }
+}

@@ -1,0 +1,94 @@
+/* Footer Styling */
+.footer {
+   
+    padding: 20px;
+    margin: 20px 160px ; /* Align with header's margins */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    position: relative; /* For additional design elements */
+  }
+  
+  /* Footer Content */
+  .footer span {
+    font-size: 18px;
+    font-weight: 500;
+    color: #bbb;
+    display: inline-block;
+    margin-right: 5px; /* Space between text and link */
+  }
+  
+  .footer a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff8a00;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  .footer a:hover {
+    color: #e57c00;
+    text-shadow: 0 0 8px #ff8a00; /* Glow effect on hover */
+  }
+  
+  /* Social Media Icons */
+  .footer-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between icons */
+  }
+  
+  .footer-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #444, #333); /* Subtle gradient for icons */
+    border-radius: 50%; /* Rounded icons */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Depth shadow */
+  }
+  
+  .footer-icon:hover {
+    background: linear-gradient(135deg, #ff8a00, #e57c00); /* Highlight on hover */
+    transform: scale(1.2); /* Slight enlarge effect */
+  }
+  
+  .footer-icon img {
+    width: 20px;
+    height: 20px;
+    filter: invert(1); /* White icon for dark background */
+  }
+  
+  /* Footer Separator */
+  .footer-separator {
+    height: 2px;
+    background: #444;
+    margin: 20px auto;
+    width: 80%; /* Thin horizontal line */
+    border-radius: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer {
+      margin: 20px 20px; /* Adjust margin for small screens */
+      padding: 20px;
+    }
+  
+    .footer span,
+    .footer a {
+      font-size: 16px;
+    }
+  
+    .footer-icons {
+      gap: 15px;
+    }
+  
+    .footer-icon {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
